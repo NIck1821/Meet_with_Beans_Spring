@@ -1,11 +1,13 @@
 package jm.task.core.jdbc.service;
 
-
 import jm.task.core.jdbc.model.User;
 
-
-import java.sql.*;
-import java.util.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 public class UserServiceImpl implements UserService {
     private static final String url = "jdbc:mysql://localhost/store2?serverTimezone=Europe/Moscow&useSSL=false";
