@@ -13,7 +13,7 @@ public class Main {
         // реализуйте алгоритм здесь
         UserServiceImpl userService = new UserServiceImpl();
         userService.createUsersTable();
-        String[] name  = new String [] {"Winter", "Spring", "Summer", "Autumn"};
+        String[] name  = new String [] {"Winter", " Spring", "Summer", "Autumn"};
         for (int i1 = 0; i1 < 4; i1++) {
             userService.saveUser(name[i1], "alex", (byte) 1);
             System.out.println("User с именем – " + name[i1] + " добавлен в базу данных ");
