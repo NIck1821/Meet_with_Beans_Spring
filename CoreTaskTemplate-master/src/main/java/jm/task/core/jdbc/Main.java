@@ -13,7 +13,7 @@ public class Main {
             System.out.println("User с именем – " + name[i1] + " добавлен в базу данных ");
         }
         for (int i = 0; i < 4; i++) {
-            String Name = userService.getAllUsers().get(i).toString();
+            String Name = userService.getAllUsers().get(i).getName();
             System.out.println(Name);
         }
         userService.cleanUsersTable();
