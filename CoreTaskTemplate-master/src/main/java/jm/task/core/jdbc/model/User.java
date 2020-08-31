@@ -59,4 +59,21 @@ public class User {
     public void setAge(Byte age) {
         this.age = age;
     }
+    public boolean equals(Object obj) {
+        if (!(obj instanceof User))
+            return false;
+        if (obj == this)
+            return true;
+        User user = (User) obj;
+        return this.getId().equals(user.getId()) && this.getName().equals(user.getName()) &&
+        this.getLastName().equals(user.getLastName()) && this.getAge().equals(user.getAge());
+    }
+
+    public int hashCode() {
+        int result = 0;
+        result = 31  * (this.getId() == null ? 2 : getId().hashCode()) * (this.getName() == null ? 2 : getName().hashCode());
+        result = result * 29 * (this.getLastName() == null ? 2 : getLastName().hashCode()) * (this.getAge() == null ? 2 : getAge().hashCode());
+        return result;
+    }
+
 }
